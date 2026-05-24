@@ -1,0 +1,10 @@
+<div>
+  <h2>🏠 Tableau de bord Admin</h2>
+  <p>Bienvenue, <strong>{{ authService.getUtilisateur() }}</strong> !</p>
+  <div class="stats">
+    <div class="stat-card">Produits : 5</div>
+    <div class="stat-card">Utilisateurs : 3</div>
+    <div class="stat-card">Commandes : 12</div>
+  </div>
+  <button (click)="seDeconnecter()">🏠 Se déconnecter</button>
+</div>

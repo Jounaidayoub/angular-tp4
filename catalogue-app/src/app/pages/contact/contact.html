@@ -1,0 +1,9 @@
+<div class="contact-container">
+  <h1>🏠 Contact</h1>
+  <form (ngSubmit)="envoyer()">
+    <input [(ngModel)]="nom" name="nom" type="text" placeholder="Votre nom" required>
+    <input [(ngModel)]="email" name="email" type="email" placeholder="Adresse email" required>
+    <textarea [(ngModel)]="message" name="message" placeholder="Votre message" required></textarea>
+    <button type="submit">🏠 Envoyer</button>
+  </form>
+</div>

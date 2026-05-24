@@ -1,0 +1,22 @@
+<div>
+  <a routerLink="/produits" class="btn-retour">← Retour à la liste</a>
+  @if (produit) {
+    <div class="fiche-produit">
+      <h1>{{ produit.nom }}</h1>
+      <p class="categorie">🏠 {{ produit.categorie }}</p>
+      <p class="description">{{ produit.description }}</p>
+      <p class="prix">{{ produit.prix | currency:'MAD':'code':'1.0-0' }}</p>
+      <p>
+        Disponibilité :
+        @if (produit.enStock) { <span class="stock-ok">🏠 En stock</span> }
+        @else { <span class="rupture">🏠 Rupture de stock</span> }
+      </p>
+    </div>
+  } @else {
+    <div class="not-found">
+      <h2>❌ Produit introuvable</h2>
+      <p>Aucun produit avec l'identifiant : {{ id }}</p>
+      <a routerLink="/produits">Voir tous les produits</a>
+    </div>
+  }
+</div>

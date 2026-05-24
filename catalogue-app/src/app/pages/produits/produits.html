@@ -1,0 +1,18 @@
+<div>
+  <h1>🏠 Catalogue — {{ produits.length }} produit(s)</h1>
+  <div class="grille-produits">
+    @for (p of produits; track p.id) {
+      <div class="carte-produit">
+        <h3>{{ p.nom }}</h3>
+        <p class="categorie">{{ p.categorie }}</p>
+        <p class="prix">{{ p.prix | currency:'MAD':'code':'1.0-0' }}</p>
+        <p [class.rupture]="!p.enStock">
+          {{ p.enStock ? '🏠 En stock' : '🏠 Rupture' }}
+        </p>
+        <a [routerLink]="['/produits', p.id]" class="btn-detail">
+          Voir le détail →
+        </a>
+      </div>
+    }
+  </div>
+</div>

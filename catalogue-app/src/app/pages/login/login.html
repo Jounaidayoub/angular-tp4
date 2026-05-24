@@ -1,0 +1,13 @@
+<div class="login-container">
+  <h1>🏠 Connexion</h1>
+  @if (erreur) {
+    <div class="erreur">{{ erreur }}</div>
+  }
+  <form (ngSubmit)="connecter()">
+    <input [(ngModel)]="email" name="email" type="email" placeholder="Adresse email" required>
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Mot de passe" required>
+    <button type="submit">🏠 Se connecter</button>
+    <button type="button" (click)="annuler()">❌ Annuler</button>
+  </form>
+  <p>Essayez n'importe quel email/mot de passe pour tester.</p>
+</div>

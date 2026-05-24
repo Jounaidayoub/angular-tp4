@@ -1,0 +1,14 @@
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <h2>🏠 Administration</h2>
+    <nav>
+      <a routerLink="/admin" routerLinkActive="actif" [routerLinkActiveOptions]="{exact:true}">🏠 Dashboard</a>
+      <a routerLink="/admin/users" routerLinkActive="actif">🏠 Utilisateurs</a>
+      <a routerLink="/admin/produits" routerLinkActive="actif">🏠 Produits</a>
+    </nav>
+    <p>Connecté : {{ authService.getUtilisateur() }}</p>
+  </aside>
+  <main class="admin-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
